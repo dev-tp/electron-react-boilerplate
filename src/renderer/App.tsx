@@ -1,7 +1,14 @@
 import React from 'react';
 
-import Home from './pages/Home';
-
 export default function App(): JSX.Element {
-  return <Home />;
+  return (
+    <>
+      <h1>Hello, World!</h1>
+      <h2>Today is {new Date().toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      })}</h2>
+    </>
+  );
 }

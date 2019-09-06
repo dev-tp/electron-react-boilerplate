@@ -1,17 +1,17 @@
 {
-  "name": "electron-react-boilerplate",
+  "name": "electron-react-starter",
   "version": "0.1.0",
   "description": "An Electron + React boilerplate for minimalists.",
   "main": "src/main/main.js",
   "build": {
-    "appId": "com.example.electron-react-boilerplate"
+    "appId": "com.example.electron-react-starter"
   },
   "scripts": {
     "compile": "electron-webpack",
     "dev": "electron-webpack dev",
     "dist": "yarn compile && electron-builder"
   },
-  "repository": "https://github.com/dev-tp/electron-react-boilerplate",
+  "repository": "https://github.com/dev-tp/electron-react-starter",
   "keywords": [],
   "author": "dev-tp",
   "license": "MIT",

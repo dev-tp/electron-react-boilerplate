@@ -1,4 +1,4 @@
-Copyright &copy; 2019 dev-tp
+Copyright &copy; <year> <copyright holder>
 
 All rights reserved.
 

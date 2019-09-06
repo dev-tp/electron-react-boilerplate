@@ -4,9 +4,9 @@ import * as path from 'path';
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
-let mainWindow: BrowserWindow | null = null;
+let mainWindow = null;
 
-function createMainWindow(): BrowserWindow {
+function createMainWindow() {
   const window = new BrowserWindow({
     webPreferences: { nodeIntegration: true },
   });
@@ -27,7 +27,7 @@ function createMainWindow(): BrowserWindow {
 
   window.on('closed', () => mainWindow = null);
 
-  window.webContents.on('devtools-opened', () => {
+  window.webContents.on('devtools-opened', function () {
     window.focus();
     setImmediate(() => window.focus());
   });
@@ -35,7 +35,7 @@ function createMainWindow(): BrowserWindow {
   return window;
 }
 
-app.on('activate', () => {
+app.on('activate', function () {
   if (mainWindow === null) {
     mainWindow = createMainWindow();
   }
@@ -43,7 +43,7 @@ app.on('activate', () => {
 
 app.on('ready', () => mainWindow = createMainWindow());
 
-app.on('window-all-closed', () => {
+app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') {
     app.quit();
   }

@@ -2,7 +2,7 @@
   "name": "electron-react-boilerplate",
   "version": "0.1.0",
   "description": "An Electron + React boilerplate for minimalists.",
-  "main": "src/main/main.ts",
+  "main": "src/main/main.js",
   "build": {
     "appId": "com.example.electron-react-boilerplate"
   },
@@ -17,20 +17,20 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/preset-react": "^7.0.0",
-    "@types/electron": "^1.6.10",
-    "@types/react": "^16.9.2",
-    "@types/react-dom": "^16.9.0",
     "electron": "^6.0.7",
     "electron-builder": "^21.2.0",
     "electron-webpack": "^2.7.4",
-    "electron-webpack-ts": "^3.2.0",
     "webpack": "^4.39.3"
   },
   "dependencies": {
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "source-map-support": "^0.5.13",
-    "typescript": "^3.6.2",
     "yarn": "^1.13.0"
+  },
+  "electronWebpack": {
+    "renderer": {
+      "webpackConfig": "webpack.renderer.config.js"
+    }
   }
 }

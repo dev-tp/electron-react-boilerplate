@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Counter(): JSX.Element {
+export default function Counter() {
   const [number, setNumber] = React.useState(0);
 
   return (
